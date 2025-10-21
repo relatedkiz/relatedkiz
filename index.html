@@ -54,7 +54,11 @@
                             <li class="nav-item active selected">
                                 <a class="nav-link current" href="#head">Головна <span class="sr-only">(current)</span></a>
                             </li>
-
+<button 
+  onclick="gtag('event', 'home_button_click', {
+    event_category: 'navigation',
+    event_label: 'Кнопка Головна'
+  });"
                             <li class="nav-item">
                                 <a class="nav-link" href="#about">Про нас</a>
                             </li>
@@ -324,5 +328,6 @@
 </body>
 
 </html>
+
 
 
