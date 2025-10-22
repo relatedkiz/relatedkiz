@@ -14,8 +14,8 @@ a:focus {
 	outline: none;
 }
 
-.container-fluid { 
-	padding-left: 0; 
+.container-fluid {
+	padding-left: 0;
 	padding-right: 0;
 	overflow-x: hidden;
 }
@@ -53,13 +53,13 @@ a:focus {
     border: none;
     color: rgb(255,255,255);
     display: block;
-    margin: 0 auto;     
+    margin: 0 auto;
 }
 
 button:focus { outline: none; }
 h1, h2, p {	color: white; }
 
-p { 
+p {
 	font-weight: 300;
 	line-height: 1.8;
 	margin-bottom: 35px;
@@ -81,8 +81,8 @@ p {
         -webkit-justify-content: center;
             justify-content: center;
 	position: fixed;
-    width: 100%;  
-    transition: all 0.3s ease;  
+    width: 100%;
+    transition: all 0.3s ease;
     z-index: 1000;
 }
 
@@ -105,6 +105,8 @@ p {
 }
 
 /* Кнопка скрытия/показа навбара */
+
+
 .nav-hide-btn {
     position: fixed;
     top: 10px;
@@ -166,6 +168,8 @@ p {
     100% { transform: translateY(0); opacity: 1; }
 }
 
+
+
 /* Добавлено */
 .tm-hero {
     position: absolute;
@@ -174,21 +178,6 @@ p {
     transform: translate(0, 0); /* убираем центрирование */
 }
 
-
- /* NOT USED */
-/*.tm-hero {*/
-/*	display: -ms-flexbox;*/
-/*	display: -webkit-flex;*/
-/*	display: flex;*/
-/*	-ms-flex-align: center;*/
-/*	    -webkit-align-items: center;*/
-/*	        align-items: center;*/
-/*	-ms-flex-pack: center;*/
-/*	    -webkit-justify-content: center;*/
-/*	        justify-content: center;*/
-/*	text-align: center;*/
-/*	min-height: 640px; !*for IE 11 & 10*!*/
-/*}*/
 
 .tm-hero-title { font-size: 3rem; color: black }
 
@@ -207,14 +196,14 @@ p {
 	min-height: 640px; /* 640 */
 	max-width: 480px; /* 480 */
 	padding: 40px;	 /* 40 */
-	display: -ms-flexbox;	
-	display: -webkit-flex;	
-	display: flex;   
-	-webkit-flex-direction: column;   
-	    -ms-flex-direction: column;   
-	        flex-direction: column; 
-    -ms-flex-pack: center;    
-        -webkit-justify-content: center;    
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+    -ms-flex-pack: center;
+        -webkit-justify-content: center;
             justify-content: center;
 }
 
@@ -308,11 +297,29 @@ p {
     }
 }
 
+.tm-hero-title,
+.tm-hero-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: none; /* отключаем автозапуск по умолчанию */
+}
+
+/* при появлении добавляем анимацию */
+.tm-hero-title.visible-hero,
+.tm-hero-subtitle.visible-hero {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* задержка для подзаголовка */
+.tm-hero-subtitle.visible-hero {
+    animation-delay: 0.4s;
+}
+
 
 
 .tm-textbox-padding { padding: 50px; }
 .tm-text-black { color: black; }
-.tm-fa { 
+.tm-fa {
 	color: white;
 	padding-bottom: 40px;
     text-align: center;
@@ -320,18 +327,18 @@ p {
 }
 .tm-margin-b-0 { margin-bottom: 0; }
 
-.tm-sect-4 { 
-	padding-top: 80px; 
+.tm-sect-4 {
+	padding-top: 80px;
 	padding-bottom: 80px;
 }
 
-.tm-sect-5 { 
-	padding-top: 80px; 
+.tm-sect-5 {
+	padding-top: 80px;
 	padding-bottom: 80px;
 }
 
-.tm-sect-7 { 
-	padding-top: 80px; 
+.tm-sect-7 {
+	padding-top: 80px;
 	padding-bottom: 80px;
 }
 
@@ -436,11 +443,14 @@ p {
     opacity: 1;
     z-index: 1;
 }
-/* Цвет пунктов */
+
 ol li::marker {
     color: white;
     font-weight: bold;
 }
+
+
+/* fade scroll */
 .fade-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -451,6 +461,7 @@ ol li::marker {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 /* Footer */
 
@@ -553,11 +564,6 @@ ol li::marker {
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.footer-text:hover {
-    color: #fab1b1;
-    text-shadow: 0 0 10px rgba(250, 177, 177, 0.5);
-}
-
 /* Телефон и email */
 .footer-text-foot {
     font-size: 0.95rem;
@@ -573,6 +579,11 @@ ol li::marker {
 /* Лёгкое разделение между копирайтом и контактами */
 .footer-text-foot:first-of-type {
     margin-top: 6px;
+}
+
+.footer-text:hover {
+    color: #fab1b1;
+    text-shadow: 0 0 10px rgba(250, 177, 177, 0.5);
 }
 
 /* Сердце */
@@ -700,7 +711,3 @@ ol li::marker {
 .tm-img-slider:hover .tm-img-slider-item {
     transition-duration: 0.45s;
 }
-
-
-
-
