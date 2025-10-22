@@ -558,6 +558,23 @@ ol li::marker {
     text-shadow: 0 0 10px rgba(250, 177, 177, 0.5);
 }
 
+/* Телефон и email */
+.footer-text-foot {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.footer-text-foot:hover {
+    color: #fab1b1;
+}
+
+/* Лёгкое разделение между копирайтом и контактами */
+.footer-text-foot:first-of-type {
+    margin-top: 6px;
+}
+
 /* Сердце */
 .heart {
     color: #ff6b6b;
@@ -683,6 +700,7 @@ ol li::marker {
 .tm-img-slider:hover .tm-img-slider-item {
     transition-duration: 0.45s;
 }
+
 
 
 
