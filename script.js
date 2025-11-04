@@ -215,3 +215,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+(function(){
+    const panel = document.getElementById('stickySites');
+    if (!panel) return;
+
+    // Для fade-scroll: добавляем класс visible при появлении на экране
+    try {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(ent => {
+                if (ent.isIntersecting) {
+                    panel.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.05 });
+        obs.observe(panel);
+    } catch(e) { /* старые браузеры — игнорируем */ }
+})();
